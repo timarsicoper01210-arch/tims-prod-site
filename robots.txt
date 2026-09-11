@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://timarsicoper01210-arch.github.io/tims-prod-site/sitemap.xml

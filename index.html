@@ -4,7 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tims Prod — Signal, Collection, Studio</title>
+  <meta name="description" content="Tims Prod 24/7 : radio Signal en streaming continu, Collection de 106 titres originaux, et Studio de production pro. Musique originale, créations continues." />
+  <link rel="canonical" href="https://timarsicoper01210-arch.github.io/tims-prod-site/" />
+  <meta property="og:type" content="music.musician" />
+  <meta property="og:site_name" content="Tims Prod" />
+  <meta property="og:title" content="Tims Prod — Signal, Collection, Studio" />
+  <meta property="og:description" content="Radio Signal en streaming continu, Collection de 106 titres originaux, Studio de production pro." />
+  <meta property="og:url" content="https://timarsicoper01210-arch.github.io/tims-prod-site/" />
+  <meta property="og:image" content="https://timarsicoper01210-arch.github.io/tims-prod-site/favicon.svg" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Tims Prod — Signal, Collection, Studio" />
+  <meta name="twitter:description" content="Radio Signal en streaming continu, Collection de 106 titres originaux, Studio de production pro." />
+  <meta name="twitter:image" content="https://timarsicoper01210-arch.github.io/tims-prod-site/favicon.svg" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Tims Prod",
+    "url": "https://timarsicoper01210-arch.github.io/tims-prod-site/",
+    "genre": "Musique originale",
+    "sameAs": [
+      "https://www.instagram.com/tims_daily01/",
+      "https://www.instagram.com/tims_prod_official/",
+      "https://www.tiktok.com/@tims.prod",
+      "https://www.tiktok.com/@tims_daily01"
+    ]
+  }
+  </script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -231,5 +259,16 @@
       <p>Tims Prod © 2026 — Musique originale, créations continues</p>
     </footer>
   </div>
+  <script>
+    // Visibilité du tunnel de vente : quelle carte (Signal/Collection/Studio)
+    // convertit réellement, en plus du PageView déjà tracké plus haut.
+    document.querySelectorAll('.card').forEach(function (card) {
+      card.addEventListener('click', function () {
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead', { content_name: card.classList[1] });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
